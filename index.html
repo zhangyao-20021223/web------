@@ -3,101 +3,46 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>放课后time</title>
+    <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鼠标悬停动画</title>
-    <style>
-        <style type="text/css">html {
-            box-sizing: border-box;
-            font: 18px PT Mono;
-            background: antiquewhite;
-        }
-        
-        *,
-        *::before,
-        *::after {
-            box-sizing: inherit;
-        }
-        
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            width: 100%;
-            height: 100vh;
-        }
-        
-        .box {
-            width: 25%;
-            min-width: 250px;
-            display: block;
-            height: 50px;
-            position: relative;
-            border-radius: 5px;
-            background: linear-gradient(to right, #abbd73 35%, #d6e2ad 100%);
-            margin-bottom: 40px;
-            padding: 15px 25px 0 40px;
-            color: darkslategray;
-            box-shadow: 1px 2px 1px -1px #777;
-            transition: background 200ms ease-in-out;
-        }
-        
-        .shadow {
-            position: relative;
-        }
-        
-        .shadow:before {
-            z-index: -1;
-            position: absolute;
-            content: "";
-            bottom: 13px;
-            right: 7px;
-            width: 75%;
-            top: 0;
-            box-shadow: 0 15px 10px #777;
-            -webkit-transform: rotate(4deg);
-            transform: rotate(4deg);
-            transition: all 150ms ease-in-out;
-        }
-        
-        .box:hover {
-            background: linear-gradient(to right, #abbd73 0%, #abbd73 100%);
-        }
-        
-        .shadow:hover::before {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-            bottom: 20px;
-            z-index: -10;
-        }
-        
-        .circle {
-            position: absolute;
-            top: 14px;
-            left: 15px;
-            border-radius: 50%;
-            box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 0 0 0 25px antiquewhite;
-            width: 20px;
-            height: 20px;
-            display: inline-block;
-        }
-    </style>
-    </style>
 </head>
 
 <body>
-    <div class="box shadow">
-        这是是pic-1
-        <div class="circle"></div>
-    </div>
-    <div class="box shadow">
-        这是是pic-2
-        <div class="circle"></div>
-    </div>
-    <div class="box shadow">
-        这是是pic-3
-        <div class="circle"></div>
-    </div>
+	<!-- 页面快捷栏的标签
+    <div id="the_shortcuts">
+        <div id="the_shortcuts_1"><a href="#">放课后的下午茶时间</a></div>
+        <div id="the_shortcuts_2"><a href="#">小窝</a></div>
+        <div id="the_shortcuts_3"><a href="#">留言板</a></div>
+        <div id="the_shortcuts_4"><a href="#">宝藏</a></div>
+        <div id="the_shortcuts_5"><a href="#">关于我们</a></div>
+    </div>-->
+	<!-- <div id="cat-foot-font"></div> -->
+	<canvas id="canvas" style="border: 1px solid #aaa;display: block;margin: 50px auto;"></canvas>
+	<script type="text/javascript">
+		window.onload = function()
+			{
+				var canvas = document.getElementById('canvas');
+				canvas.width = 800;
+				canvas.height = 800;
+				var context = canvas.getContext('2d');
+				context.lineWidth = 10;
+				context.beginPath();
+				context.moveTo(50,50);
+				context.lineTo(70,70);
+				context.lineTo(10,70);
+				context.strokeStyle = "#058";
+				context.stroke();
+				
+				content.beginPath();
+				context.moveTo(150,150);
+				context.lineTo(170,170);
+				context.lineTo(110,170);
+				context.strokeStyle = "#FFE4C4";
+				context.stroke();
+				
+			}
+	</script>
 </body>
 
 </html>
